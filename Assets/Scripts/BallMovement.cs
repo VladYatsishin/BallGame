@@ -15,7 +15,7 @@ public class BallMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         
-        Vector3 vector3 = new Vector3(horizontalInput * speed, rb.velocity.y, verticalInput * speed);
+        Vector3 vector3 = new Vector3(horizontalInput * speed, 0, verticalInput * speed);
         rb.AddForce(vector3);
     }
 }
