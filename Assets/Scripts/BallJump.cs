@@ -10,21 +10,22 @@ public class BallJump : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        if (rb == null) 
+            rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-         if (isOnTheGround && (Input.GetKeyDown(KeyCode.Space)))
+         if (isOnTheGround && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector3(0,jumpForce,0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             isOnTheGround = false;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isOnTheGround = true;
         }
