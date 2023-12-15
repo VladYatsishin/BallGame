@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallJump : MonoBehaviour
+public class PlayerJump : MonoBehaviour
 {
     public float jumpForce = 3;
     public Rigidbody rb;

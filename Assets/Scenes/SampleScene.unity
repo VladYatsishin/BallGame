@@ -348,6 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 100
+  isOnTheGround: 1
+  isEntered: 0
 --- !u!114 &1017079749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +406,19 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: -2963457359574538270, guid: df18075e05612a24391b899127c8be99, type: 3}
   m_PrefabInstance: {fileID: 5423748710077959917}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1651423815
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651423802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2129081409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6497726280475984738, guid: 360337c208f5fc646a75808154f7524c, type: 3}
@@ -660,6 +675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 6497726280475984738, guid: 360337c208f5fc646a75808154f7524c, type: 3}
+      propertyPath: m_TagString
+      value: Cube1
+      objectReference: {fileID: 0}
     - target: {fileID: 8634823971109895105, guid: 360337c208f5fc646a75808154f7524c, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -692,6 +711,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2559298603121917125, guid: 006c5e29cf6237c438e00615b9415304, type: 3}
       propertyPath: m_Name
+      value: Cube2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559298603121917125, guid: 006c5e29cf6237c438e00615b9415304, type: 3}
+      propertyPath: m_TagString
       value: Cube2
       objectReference: {fileID: 0}
     - target: {fileID: 3425506486325043368, guid: 006c5e29cf6237c438e00615b9415304, type: 3}
