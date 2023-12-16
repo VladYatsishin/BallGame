@@ -38,19 +38,21 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        cubes.Add(other.GetComponent<ICubeInteraction>());
-
-        foreach (var cube in cubes)
-        {
+        if (other.TryGetComponent<ICubeInteraction>(out var cube))
+        { 
+            cubes.Add(cube);
             cube.ChangeVisual();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        foreach (var cube in cubes)
+        if (cubes.Count != 0)
         {
-            cube.BackInitialVisual();
+            if (other.TryGetComponent<ICubeInteraction>(out var cube))
+            {
+                cube.BackInitialVisual();
+                cubes.Remove(cube);
+            }
         }
-        cubes.Remove(other.GetComponent<ICubeInteraction>());
     }
 }

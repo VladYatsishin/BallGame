@@ -18,7 +18,7 @@ public class Cube1 : MonoBehaviour, ICubeInteraction
     private Color initialColor;
     private void Start()
     {
-        if (rb == null)
+        if (rb == null) 
             rb = GetComponent<Rigidbody>();
 
         if (cubeRenderer == null)
