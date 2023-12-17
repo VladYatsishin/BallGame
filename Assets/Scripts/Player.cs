@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,15 +26,30 @@ public class Player : MonoBehaviour
         rb.AddForce(new Vector3(h * speed, 0, v * speed));
 
         CubeJumpOnCommand();
+        BackToMainMenu();
     }
     private void CubeJumpOnCommand()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            foreach (var cube in cubes)
+            /*foreach (var cube in cubes)
             {
                 cube.CubeJump();
+            }*/
+
+            for (int i = 0; i < cubes.Count; i++)
+            {
+                var cube = cubes[i];
+                cube.CubeJump();
             }
+        }
+    }
+
+    private void BackToMainMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
     }
     private void OnTriggerEnter(Collider other)
