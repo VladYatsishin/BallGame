@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float speed = 5;
     private Rigidbody rb;
 
+    [SerializeField] private float speed = 5;
+
     private List<ICubeInteraction> cubes;
+
     void Start()
     {
         if (rb == null)
