@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody rb;
 
-    [SerializeField] private float speed = 5;
+    [SerializeField] private float speed = 50;
 
     private List<ICubeInteraction> cubes;
 
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         rb.AddForce(new Vector3(h * speed, 0, v * speed));
-
+        
         CubeJumpOnCommand();
         BackToMainMenu();
     }
@@ -34,11 +34,6 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            /*foreach (var cube in cubes)
-            {
-                cube.CubeJump();
-            }*/
-
             for (int i = 0; i < cubes.Count; i++)
             {
                 var cube = cubes[i];
@@ -46,12 +41,11 @@ public class Player : MonoBehaviour
             }
         }
     }
-
     private void BackToMainMenu()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Main Menu");
         }
     }
     private void OnTriggerEnter(Collider other)

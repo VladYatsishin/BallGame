@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 3;
+    public float jumpForce = 50;
     public Rigidbody rb;
     public bool isOnTheGround = true;
 

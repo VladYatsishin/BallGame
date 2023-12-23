@@ -7,7 +7,7 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     [SerializeField] Transform focus = default;
-    [SerializeField, Range(1f, 30f)] private float distance = 5f;
+    [SerializeField, Range(1f, 40f)] private float distance = 5f;
     [SerializeField, Min(0f)] private float focusRadius = 1f;
     private Vector3 focusPoint;
 
