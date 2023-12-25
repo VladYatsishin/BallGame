@@ -10,6 +10,7 @@ public class ExitCube : MonoBehaviour
     [SerializeField] float exitTimer = 5;
     private float time;
     private Outline outline;
+    private bool isEntered = false;
 
     private void Start()
     {
@@ -18,15 +19,16 @@ public class ExitCube : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        isEntered = true;
         Debug.Log("Player entered the collider");
 
         time = 0;
         outline.OutlineWidth = 6;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (isEntered == true)
         {
             time += Time.deltaTime;
             Debug.Log(time);
@@ -43,6 +45,7 @@ public class ExitCube : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isEntered = false;
             Debug.ClearDeveloperConsole();
             Debug.Log("Player left the collider, timer reseted");
 
