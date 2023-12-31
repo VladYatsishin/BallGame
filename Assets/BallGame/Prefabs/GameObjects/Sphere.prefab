@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0acdfa9bb56134db2f9842e7d275dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 50
 --- !u!114 &2651330296579628763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2
+  m_Time: 3
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.5060215
@@ -242,5 +242,5 @@ TrailRenderer:
     shadowBias: 1
     generateLightingData: 0
   m_MinVertexDistance: 0
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
