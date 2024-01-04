@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BallGame/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Game_2D/Resources/Scenes/Shop.unity
+    guid: 60320977fa93a5d4c844333b897aab16
+  - enabled: 1
+    path: Assets/Game_2D/Resources/Scenes/Game2D.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
